@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="botones">
+      <span>Original:</span>
+      <input type="number" name="number" id="number" />
+      <input
+        type="button"
+        name="button1"
+        id="button1"
+        value="Draw"
+        onclick="drawCards();"
+      />
+      <input
+        type="button"
+        name="button2"
+        id="button2"
+        value="Sort"
+        onclick="ordenarCard();"
+      />
+    </div>
+    <div id="filaCartas">
+      <!-- <div id="card1" class="card">
+        <div class="simboloUp">
+            <span class="colorCard">&#9824;</span>
+        </div>
+        <p class="numb">5</p>
+        <div class="simboloDown">
+            <span class="colorCard">&#9824;</span>
+        </div>
+      </div> -->
+    </div>
+    <div class="parrafoEnunciado"><p>Select Sort Log</p></div>
+    <div id ="cuerpoOrden" class="cuerpoOrden"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
