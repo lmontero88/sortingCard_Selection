@@ -100,36 +100,23 @@ function dibujarCartasOrdenadas(posicion) {
     cuerpoOrden.appendChild(divFilaOrdenada);
 }
 
-//ordenar cartas con metodo bubble
-const ordenarCard = () => {
+//ordenar cartas con metodo selection
+
+const ordenarCard = (arr) => {
     let contSwap = 0;
-    for(let i = 0; i < arr.length - 1; i++) {
-        for(let j = i+1; j < arr.length; j++) {
-            if(arr[j].pos < arr[i].pos) {
-                let tmp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = tmp;
-                dibujarCartasOrdenadas(contSwap);
-                contSwap = contSwap + 1;
-            }
+    while (contSwap < arr.length-1){
+        for(let i = contSwap +1; i < arr.length-1; i++) {
+          if (arr[contSwap ] > arr[i]) {
+            let aux = arr[contSwap];
+            arr[contSwap] = arr[i];
+            arr[i] = aux;
+          }
         }
+        contSwap++;
     }
-    // let wall = arr.length - 1;
-    // for (let i = wall; i > 0; i--) {
-    //     for (let j = 0; j < wall; j++) {
-    //         if (arr[j] > arr[j + 1]) {
-    //             let aux = arr[j];
-    //             arr[j] = arr[j + 1];
-    //             arr[j + 1] = aux;
-    //             console.log("object");
-    //         }
-    //     }
-    // }
-}
-
-
-
-
+    return dibujarCartasOrdenadas(contSwap);
+    
+};
 
 
 
